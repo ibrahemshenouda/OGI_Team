@@ -5,8 +5,7 @@ import time
 
 MQTT_BROKER = "192.168.72.189"  
 MQTT_PORT = 1883
-MQTT_TOPIC = "cam1/rasp"
-
+MQTT_TOPIC = "cam1_Parking/client1"
 
 BUTTON_PIN = 26
 GPIO.setmode(GPIO.BCM)
@@ -31,6 +30,6 @@ try:
         prev_state = curr_state
         time.sleep(0.05)  
 except KeyboardInterrupt:
-    print("🛑 Exiting...")
+    print("Exiting...")
 finally:
     GPIO.cleanup()
